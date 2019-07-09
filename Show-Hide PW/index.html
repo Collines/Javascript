@@ -7,13 +7,31 @@
     <meta name='description' content='Show/Hide PW'/>
     <title>Show/Hide PW</title>
     <style>
+        #checkbox
+        {
+            float:left;
+            margin:0;
+            height:20px;
+        }
+        label{
+            letter-spacing: 1px;
+            float:left;
+            width:120px;
+            margin:0 3px;
+        }
+        input[type='password'], input[type='text']{
+            display:block;
+            margin-bottom: 5px;
+            padding:4px 8px;
+        }
     </style>
 </head>
 
 <body>
     <form id='main'>
-    <input type="password" placeholder="password"/><br/><br/>
-    <input type="checkbox" name="showpw">Show password
+    <input type="password" placeholder="Password"/>
+    <label>Show password:</label>
+    <input id='checkbox' type="checkbox" name="showpw">
     </form>
     <script src='script.js'></script>
 </body>
