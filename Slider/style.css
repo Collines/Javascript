@@ -1,0 +1,136 @@
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container
+{
+    width:1040px;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+.clearfix
+{
+    clear: both;
+}
+
+#copyright {
+    position:absolute;
+    z-index: 2;
+    right:-2px;
+    bottom:-2px;
+    background:rgba(0,0,0,0.6);
+    color:#FFF;
+    padding:3px 6px;
+    border-radius: 4px;
+}
+
+#slider-container
+{
+    width: 704px;
+    height: 201px;
+    overflow: hidden;
+    margin:10px auto;
+    position:relative;
+}
+
+#slider-container img 
+{
+    position: absolute;
+    opacity:0;
+    transition: opacity 1s;
+    z-index: 1;
+}
+
+#slider-container img.active
+{
+    opacity:1;
+}
+
+#slider-container #slider-number {
+    position: absolute;
+    left:10px;
+    top:10px;
+    background:rgba(0,0,0,0.6);
+    color:#FFF;
+    padding:5px 8px;
+    font-size:17px;
+    border-radius: 6px;
+    z-index: 2;
+    letter-spacing: 3px;
+}
+
+#slider-navigation{
+    width:704px;
+    overflow:hidden;
+    margin:0 auto;
+}
+
+#slider-navigation #indicators ul {
+    padding:0;
+    list-style: none;
+    text-align:center;
+    float:left;
+    width:60%;
+}
+
+#slider-navigation #indicators ul li {
+    display:inline-block;
+    padding:5px 10px;
+    margin-right:5px;
+    border:1px solid rgba(0,0,0,0.2);
+    transition: all .5s;
+}
+
+#slider-navigation #indicators ul li:hover
+{
+    background-color:#8c83de;
+    color:#fff;
+    cursor:pointer;
+}
+
+#slider-navigation .previous
+{
+    float:left;
+}
+
+#slider-navigation .next
+{
+    float:right;
+}
+
+#slider-navigation .previous,
+#slider-navigation .next
+{
+    width:20%;
+    padding: 5px 10px;
+    text-align: center;
+    background-image: linear-gradient(to right,#8c83de,#7d72dd,#685bdb);
+    border-radius: 10px;
+    cursor:pointer;
+    color:#FFF;
+    letter-spacing: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    transition: all .5s ease-in-out;
+    opacity:0.8
+}
+
+#slider-navigation .previous:hover,
+#slider-navigation .next:hover
+{
+    opacity:1;
+}
+
+#slider-navigation .disabled, #slider-navigation .disabled:hover {
+    cursor:no-drop;
+    opacity:0.3;
+}
+
+#slider-navigation .active {
+    background-color:#8c83de;
+    color:#fff;
+}
