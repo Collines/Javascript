@@ -73,6 +73,14 @@ for (var i = 0; i < 3; i++) {
     };
 
     function checkWinner(){
+      if(numOfClicks >=9) {
+        winnderDialog.textContent = "No Winner"
+        winnderDialog.classList.add('enabled');
+        for(let i=0; i<numOfSquares; i++){
+          allSquares[i].style.cursor = 'no-drop';
+          allSquares[i].classList.add('disabled');
+        }
+      }
       // horizontal boxes probabilities
       if(boxes[0][0].textContent !== '' && boxes[0][0].textContent === boxes[0][1].textContent && boxes[0][0].textContent === boxes[0][2].textContent) {
         colorWinner(boxes[0][0],boxes[0][1],boxes[0][2]);

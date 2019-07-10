@@ -5,7 +5,7 @@
 }
 
 #container {
-  width:600px;
+  width:300px;
   margin:0 auto;
   overflow: hidden;
   position:relative;
@@ -38,13 +38,13 @@
 
 .showwinner {
   background:orange;
-  padding:20px 50px;
+  padding:20px 0;
   text-align: center;
-  width:300px;
+  width:230px;
   margin: 0 auto;
   position:absolute;
-  top:45%;
-  left:25%;
+  top:40%;
+  left:12%;
   text-transform: uppercase;
   font-family: arial;
   transition:all .4s ease-in-out;
@@ -101,7 +101,7 @@
 .sqr
 {
   width:33.3333333333333333%;
-  height:200px;
+  height:100px;
   background: #EEE;
   float:left;
   border:1px solid rgba(0, 0, 0, 0.2);
@@ -117,8 +117,8 @@
 {
   color:#FFF;
   text-align: center;
-  font-size:150px;
-  line-height:200px;
+  font-size:75px;
+  line-height:100px;
   text-transform: uppercase;
 }
 .disabled:hover{
