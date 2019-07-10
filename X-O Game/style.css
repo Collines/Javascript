@@ -1,0 +1,134 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+#container {
+  width:600px;
+  margin:0 auto;
+  overflow: hidden;
+  position:relative;
+}
+
+
+#game-details{
+  width:350px;
+  height:70px;
+  margin: 0 auto;
+  background:#4cb050;
+  padding:5px 10px;
+  color:#FFF;
+  font-weight: bold;
+  font-family: arial;
+  letter-spacing: 1px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+#game-details #player1 {
+  color:#0d55e1;
+  font-size:20px;
+}
+
+#game-details #player2 {
+  color:#f44236;
+  font-size:20px;
+}
+
+.showwinner {
+  background:orange;
+  padding:20px 50px;
+  text-align: center;
+  width:300px;
+  margin: 0 auto;
+  position:absolute;
+  top:45%;
+  left:25%;
+  text-transform: uppercase;
+  font-family: arial;
+  transition:all .4s ease-in-out;
+  display:none;
+}
+
+@keyframes anim {
+  0%,50%,100%
+  {
+    background-color:orange;
+  } 25%,75% {
+    background-color:red;
+  }
+}
+
+.enabled {
+  display:block;
+  animation:anim 2s infinite;
+}
+
+#button {
+  margin:0 auto;
+  display:block;
+  background:#49c3d1;
+  border:none;
+  padding:10px 20px;
+  color:#FFF;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition:all .5s ease-in-out;
+}
+
+#button:hover{
+  cursor:pointer;
+  background:#0ca5b7;
+  transform:scale(1.05,1.05);
+}
+
+#game-details p {
+  margin-bottom:10px;
+}
+
+#turn {
+  width:120px;
+  text-align: center;
+  padding:5px 10px;
+  background:#215bfe;
+  color:#FFF;
+  margin:10px auto 0 auto;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.sqr
+{
+  width:33.3333333333333333%;
+  height:200px;
+  background: #EEE;
+  float:left;
+  border:1px solid rgba(0, 0, 0, 0.2);
+  transition: background .4s ease-in-out;
+}
+
+.sqr:hover {
+  cursor:pointer;
+  background:#8a8a8a;
+}
+
+.x,.o
+{
+  color:#FFF;
+  text-align: center;
+  font-size:150px;
+  line-height:200px;
+  text-transform: uppercase;
+}
+.disabled:hover{
+  background: #EEE;
+}
+.x, .x:hover{background:#f44236;}
+
+.o, .o:hover{background: #4cb050;}
+
+.winner, .winner:hover{
+  border:none;
+  background:#840ff2;
+}
