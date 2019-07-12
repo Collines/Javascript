@@ -37,16 +37,18 @@
     position:relative;
 }
 
-#slider-container img 
+#slider-container img
 {
     position: absolute;
     opacity:0;
-    transition: opacity 1s;
+    transform:scale(.4,.4);
+    transition: all 1.75s;
     z-index: 1;
 }
 
 #slider-container img.active
 {
+    transform:scale(1,1);
     opacity:1;
 }
 
@@ -82,7 +84,7 @@
     padding:5px 10px;
     margin-right:5px;
     border:1px solid rgba(0,0,0,0.2);
-    transition: all .5s;
+    transition: all 1.5s;
 }
 
 #slider-navigation #indicators ul li:hover

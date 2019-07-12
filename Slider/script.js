@@ -1,4 +1,8 @@
-var currentSlide= 3,
+var currentSlide= 3, // which slide you need to start page with
+    autoChangeTime = 5000, // time for auto change slides
+    autoChange = true, // false if you don't want auto slide
+
+    // Don't Edit below
     sliderimages = document.getElementById('slider-container').querySelectorAll('img'),
     numOfSlides = sliderimages.length,
     prevButton = document.getElementById('previous'),
@@ -16,6 +20,16 @@ var currentSlide= 3,
     indicators.appendChild(indicator);
 
     var listItems = indicators.querySelectorAll('ul li');
+
+
+    if(autoChange) {
+        setInterval(function() {
+          if(currentSlide >= numOfSlides) {
+            currentSlide = 1;
+          } else currentSlide++;
+          checkIndex();
+        }, autoChangeTime);
+      }
 
 function checkIndex() {
 
@@ -54,7 +68,6 @@ function removeActives() {
 checkIndex();
 
 for(var i=0; i<listItems.length; i++) {
-    debugger;
     listItems[i].onclick = function() {
         currentSlide = parseInt(this.getAttribute('index-num'));
         checkIndex();
